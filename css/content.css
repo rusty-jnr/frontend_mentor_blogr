@@ -1,0 +1,302 @@
+.content {
+  overflow-x: hidden;
+  min-height: 80vh;
+}
+
+/* intro */
+.intro {
+  margin-top: 100px;
+}
+.intro h2 {
+  font-family: "Overpass";
+  color: hsl(208, 49%, 24%);
+  text-align: center;
+  z-index: 2;
+  font-size: 30px;
+}
+.intro_content {
+  display: flex;
+  align-items: center;
+  margin-top: 80px;
+  /* overflow-x: hidden; */
+}
+.intro_content_desc {
+  width: 45%;
+  padding-left: 150px;
+}
+.intro_content_desc_container {
+  margin-top: 40px;
+}
+.intro_content_desc_container h4 {
+  font-family: "Overpass";
+  color: hsl(208, 49%, 24%);
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+.intro_content_desc_container p {
+  font-family: "Overpass";
+  color: hsl(207, 13%, 34%);
+  font-size: 12px;
+  font-weight: 200;
+  width: 100%;
+  letter-spacing: 0.5px;
+  line-height: 24px;
+}
+.intro_content_img_web {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 55%;
+}
+.intro_content_img_mobile {
+  display: none;
+}
+.intro_content_img_web .web_view {
+  position: absolute;
+  width: 90%;
+  right: -200px;
+}
+@media (min-width: 1024px) and (max-width: 1399px) {
+  .intro_content_img_web .web_view {
+    right: -110px;
+  }
+  .intro_content_desc {
+    width: 60%;
+    padding-left: 30px;
+  }
+}
+@media (min-width: 575px) and (max-width: 1023px) {
+  .intro_content_img_web .web_view {
+    right: -60px;
+    width: 100%;
+  }
+  .intro_content_desc {
+    width: 60%;
+    padding-left: 30px;
+  }
+  .intro_content_img_web {
+    width: 40%;
+  }
+}
+@media (max-width: 574px) {
+  .intro_content {
+    flex-direction: column;
+  }
+  .intro_content_desc {
+    width: 100%;
+    padding: 10px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .intro_content_desc_container h4 {
+    text-align: center;
+    font-size: 25px;
+  }
+  .intro_content_desc_container p {
+    text-align: center;
+    font-size: 16px;
+  }
+  .intro_content_img_web {
+    width: 40%;
+    display: none;
+  }
+  .intro_content_img_mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .intro_content_img_mobile .mobile_view {
+    width: 100%;
+  }
+}
+/* intro */
+
+/* intro two */
+.intro_two {
+  background-image: url("../images/bg-pattern-circles.svg"),
+    linear-gradient(117deg, hsl(237, 17%, 21%) 0%, hsl(237, 23%, 32%) 100%);
+  min-height: 400px;
+  background-repeat: no-repeat;
+  background-position: -50% 85%;
+  border-bottom-left-radius: 100px;
+  border-top-right-radius: 100px;
+  margin-top: 240px;
+  display: flex;
+  align-items: center;
+}
+.intro_two .container .row .intro_two_components {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.intro_two .container .row .intro_two_components img {
+  position: absolute;
+  width: 95%;
+}
+.intro_two h3 {
+  font-family: "Overpass";
+  color: hsl(0, 0%, 100%);
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+.intro_two p {
+  font-family: "Overpass";
+  color: hsl(0, 0%, 100%);
+  font-weight: 200;
+  font-size: 12px;
+  width: 70%;
+  letter-spacing: 0.5px;
+  line-height: 24px;
+}
+@media (min-width: 992px) and (max-width: 1200px){
+  .intro_two {
+    background-position: -150% 85%;
+    min-height: 300px;
+  }
+}
+@media (max-width: 767px){
+  .intro_two {
+    background-position: 50% 120%;
+    min-height: 350px;
+    margin-top: 200px;
+  }
+  .intro_two .container .row .intro_two_components {
+    align-items: center;
+    padding: 0px 20px;
+  }
+  .intro_two .container .row .intro_two_components img {
+    position: relative;
+    width: 80%;
+    margin-top: -40%;
+  }
+  .intro_two h3 {
+    font-size: 20px;
+    text-align: center;
+  }
+  .intro_two p{
+    width: 100%;
+    text-align: center;
+  }
+}
+@media (max-width: 425px){
+  .intro_two {
+    background-position: 50% 600%;
+    background-size: cover;
+    min-height: 350px;
+    margin-top: 150px;
+  }
+}
+/* intro two */
+
+/* intro three */
+.intro_content_three {
+  display: flex;
+  align-items: center;
+  margin-top: 200px;
+}
+.intro_content_three_desc {
+  width: 55%;
+  padding-right: 200px;
+}
+.intro_content_three_desc_container {
+  margin-top: 40px;
+}
+.intro_content_three_desc_container h4 {
+  font-family: "Overpass";
+  color: hsl(208, 49%, 24%);
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+.intro_content_three_desc_container p {
+  font-family: "Overpass";
+  color: hsl(207, 13%, 34%);
+  font-size: 12px;
+  font-weight: 200;
+  width: 100%;
+  letter-spacing: 0.5px;
+  line-height: 24px;
+}
+.intro_content_three_img_web {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45%;
+}
+.intro_content_three_img_mobile {
+  display: none;
+}
+.intro_content_three_img_web .web_view {
+  position: absolute;
+  width: 90%;
+  left: -170px;
+}
+@media (min-width: 1024px) and (max-width: 1399px) {
+  .intro_content_three_img_web .web_view {
+    left: -110px;
+  }
+  .intro_content_three_desc {
+    width: 50%;
+    padding-right: 30px;
+  }
+  .intro_content_three {
+    margin-top: 150px;
+  }
+}
+@media (min-width: 575px) and (max-width: 1023px) {
+  .intro_content_three_img_web .web_view {
+    left: -60px;
+    width: 100%;
+  }
+  .intro_content_three_desc {
+    width: 50%;
+    padding-right: 30px;
+  }
+  .intro_content_three_img_web {
+    width: 50%;
+  }
+  .intro_content_three {
+    margin-top: 100px;
+  }
+}
+@media (max-width: 574px) {
+  .intro_content_three {
+    flex-direction: column;
+    margin-top: 50px;
+  }
+  .intro_content_three_desc {
+    width: 100%;
+    padding: 10px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .intro_content_three_desc_container h4 {
+    text-align: center;
+    font-size: 25px;
+  }
+  .intro_content_three_desc_container p {
+    text-align: center;
+    font-size: 16px;
+  }
+  .intro_content_three_img_web {
+    width: 40%;
+    display: none;
+  }
+  .intro_content_three_img_mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .intro_content_three_img_mobile .mobile_view {
+    width: 100%;
+  }
+}
+/* intro three*/

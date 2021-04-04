@@ -1,0 +1,388 @@
+/* body */
+body{
+  overflow-x: hidden;
+}
+/* body */
+
+/* banner */
+.banner {
+  /* padding: 20px; */
+  background-image: url("../images/bg-pattern-intro.svg"),
+    linear-gradient(
+      117deg,
+      rgba(255, 143, 112, 1) 0%,
+      rgba(255, 61, 84, 1) 100%
+    );
+  min-height: 500px;
+  background-repeat: no-repeat;
+  background-position: 20% 50%;
+  border-bottom-left-radius: 100px;
+}
+.navBar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 20px 100px;
+}
+.navBar-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 20px;
+  width: 100%;
+}
+.navBar-nav ul.dropDown_links {
+  display: flex;
+  align-items: center;
+  padding-left: 0;
+  list-style: none;
+  margin: 0;
+  margin-right: auto;
+}
+.navBar-nav ul.dropDown_links > li {
+  font-family: "Ubuntu";
+  color: #fff;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 12px;
+  position: relative;
+  transition: all 0.4s ease-in-out;
+}
+.navBar-nav ul.dropDown_links > li:hover {
+  color: rgb(231, 231, 231);
+}
+.dropDown::after {
+  content: "ˇ";
+  position: absolute;
+  font-size: 20px;
+  right: 0;
+  transition: all 0.4s ease-in-out;
+  top: 6px;
+}
+.dropDown.active::after {
+  content: "ˇ";
+  position: absolute;
+  font-size: 20px;
+  right: 0;
+  transform: rotate(180deg);
+  top: -2px;
+}
+.dropDown.active:not(li) {
+  text-decoration: underline;
+}
+.dropDown_menu {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+  display: none;
+  position: absolute;
+  z-index: 10;
+  background-color: #fff;
+  color: #000;
+  padding: 10px 20px;
+  left: -5px;
+  border-radius: 5px;
+  margin-top: 10px;
+  min-width: 8rem;
+  text-align: left;
+}
+.dropDown_menu li {
+  padding: 0.3rem 0rem;
+  font-family: "Ubuntu";
+  font-weight: 400;
+  transition: all 0.1s ease-in-out;
+}
+.dropDown_menu li:hover {
+  font-weight: 500;
+}
+.dropDown_menu.show {
+  display: block;
+}
+.navBar_actions {
+  display: flex;
+  align-items: center;
+  padding-left: 0;
+  list-style: none;
+  margin: 0;
+}
+.navBar_actions li {
+  font-family: "Ubuntu";
+  color: #fff;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 12px;
+  transition: all 0.4s ease-in-out;
+}
+.navBar_actions li:hover {
+  color: rgb(231, 231, 231);
+}
+.navBar_actions li button {
+  border: none;
+  font-family: "Ubuntu";
+  font-weight: 500;
+  text-align: center;
+  transition: all 0.4s ease-in-out;
+  cursor: pointer;
+  padding: 10px 25px;
+  color: rgba(255, 61, 84, 1);
+  border-radius: 50px;
+}
+.navBar_actions li button:hover {
+  background-color: rgba(255, 255, 255, 0.24);
+  color: #fff;
+}
+.bannerInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  margin-top: 100px;
+  padding: 10px;
+}
+.bannerInfo h1 {
+  font-family: "Overpass";
+  text-align: center;
+  color: #fff;
+}
+.bannerInfo h5 {
+  font-family: "Overpass";
+  text-align: center;
+  font-size: 14px;
+  font-weight: 300;
+  color: #fff;
+  margin-top: 10px;
+}
+.bannerActions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 230px;
+  margin-top: 20px;
+}
+.bannerActions button {
+  border: none;
+  font-family: "Ubuntu";
+  font-weight: 500;
+  text-align: center;
+  font-size: 14px;
+  transition: all 0.4s ease-in-out;
+  cursor: pointer;
+}
+.bannerActions .btn1 {
+  padding: 10px 15px;
+  color: rgba(255, 61, 84, 1);
+  border-radius: 50px;
+}
+.bannerActions .btn1:hover {
+  background-color: rgba(255, 255, 255, 0.24);
+  color: #fff;
+}
+.bannerActions .btn2 {
+  padding: 10px 15px;
+  color: rgb(255, 255, 255);
+  border-radius: 50px;
+  background-color: transparent;
+  border: 1px solid #fff;
+}
+.bannerActions .btn2:hover {
+  color: rgba(255, 61, 84, 1);
+  background-color: #fff;
+}
+/* banner */
+
+/* hamburger menu */
+.hamburger_menu {
+  cursor: pointer;
+  display: none;
+}
+.hamburger_menu span {
+  width: 20px;
+  height: 2px;
+  margin: 0 auto;
+  display: block;
+  background: rgb(255, 255, 255);
+  transition: all 0.2s ease-in-out;
+  transition-delay: 0.2s;
+  margin: 0 auto;
+  margin-top: 3px;
+  border-radius: 5px;
+}
+.hamburger_menu.active span:first-of-type {
+  background: rgb(255, 255, 255);
+  transform: rotate(45deg) translate(5px, 3px);
+}
+.hamburger_menu.active span:nth-last-of-type(2) {
+  opacity: 0;
+}
+.hamburger_menu.active span:last-of-type {
+  background: rgb(255, 255, 255);
+  transform: rotate(-45deg) translate(4px, -2px);
+}
+/* hamburger menu */
+
+@media (max-width: 768px) {
+  .navBar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 20px 15px;
+  }
+}
+
+@media (max-width: 575px) {
+  .navBar {
+    justify-content: space-between;
+  }
+  .hamburger_menu {
+    display: block;
+  }
+  .navBar-nav {
+    padding: 20px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: auto;
+    margin: 0px;
+    top: 80px;
+    left: 15px;
+    right: 15px;
+    background-color: #fff;
+    border-radius: 5px;
+    z-index: 10;
+    box-shadow: 1px 10px 30px rgba(0, 0, 0, 0.30);
+    transition: all 0.2s ease-in-out;
+    animation: animateOut .3s;
+  }
+  .navBar-nav.active{
+    display: flex;
+    animation: animateIn .3s;
+  }
+  @keyframes animateOut {
+    from{
+      transform: scale(1);
+    }to{
+      transform: scale(0);
+    }
+  }
+  @keyframes animateIn {
+    from{
+      transform: scale(0);
+    }to{
+      transform: scale(1);
+    }
+  }
+  .navBar-nav ul.dropDown_links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 0;
+    list-style: none;
+    margin: 0;
+    margin-right: 0px;
+    width: 100%;
+  }
+  .navBar-nav ul.dropDown_links > li {
+    font-family: "Overpass";
+    color: hsl(240, 10%, 16%);
+    padding: 0.5rem 0rem;
+    cursor: pointer;
+    font-size: 16px;
+    position: relative;
+    transition: all 0.4s ease-in-out;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .navBar-nav ul.dropDown_links > li:hover{
+    color: hsl(240, 10%, 16%);
+  }
+  .navBar_actions {
+    display: block;
+    padding-left: 0;
+    list-style: none;
+    margin: 0;
+    padding-top: 10px;
+    border-top: 1px solid rgb(214, 212, 212);
+    width: 100%;
+  }
+  .navBar_actions li {
+    padding: 0.3rem 0rem;
+    text-align: center;
+    color: hsl(240, 10%, 16%);
+    font-family: "Overpass";
+    font-weight: 400;
+    font-size: 16px;
+    transition: all 0.1s ease-in-out;
+  }
+  .navBar_actions li:hover{
+    color: hsl(240, 10%, 16%);
+  }
+  .navBar_actions li button {
+    border: none;
+    font-family: "Overpass";
+    font-weight: 500;
+    text-align: center;
+    transition: all 0.4s ease-in-out;
+    cursor: pointer;
+    padding: 10px 25px;
+    color: rgb(255, 255, 255);
+    border-radius: 50px;
+    background-image: linear-gradient(
+      117deg,
+      hsl(13, 100%, 72%) 0%,
+      hsl(353, 100%, 62%) 100%
+    );
+  }
+  .navBar_actions li button:hover {
+    background-image: linear-gradient(
+      117deg,
+      hsl(13, 100%, 72%) 0%,
+      hsl(353, 100%, 62%) 100%
+    );
+    color: #fff;
+  }
+  .dropDown::after {
+    content: "ˇ";
+    position: absolute;
+    font-size: 20px;
+    right: 35%;
+    transition: all 0.4s ease-in-out;
+    top: 10px;
+    color: rgba(255, 61, 84, 1);
+  }
+  .dropDown.active::after {
+    content: "ˇ";
+    position: absolute;
+    font-size: 20px;
+    right: 35%;
+    transform: rotate(180deg);
+    top: -2px;
+  }
+  .dropDown_menu {
+    list-style: none;
+    margin: 0px;
+    display: none;
+    position: relative;
+    z-index: 10;
+    background-color: hsl(0, 0%, 91%);
+    color: hsl(207, 13%, 34%);
+    padding: 10px 0px;
+    border-radius: 5px;
+    margin: 20px 0px 20px 10px;
+    min-width: 100%;
+  }
+  .dropDown_menu li{
+    font-family: "Overpass";
+    padding: 0.5rem 0rem;
+  }
+  .dropDown_menu.show {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+}
