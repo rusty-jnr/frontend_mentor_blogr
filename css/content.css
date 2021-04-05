@@ -13,6 +13,7 @@
   text-align: center;
   z-index: 2;
   font-size: 30px;
+  font-weight: 600;
 }
 .intro_content {
   display: flex;
@@ -21,7 +22,7 @@
   /* overflow-x: hidden; */
 }
 .intro_content_desc {
-  width: 45%;
+  width: 50%;
   padding-left: 150px;
 }
 .intro_content_desc_container {
@@ -32,11 +33,12 @@
   color: hsl(208, 49%, 24%);
   font-size: 18px;
   margin-bottom: 20px;
+  font-weight: 600;
 }
 .intro_content_desc_container p {
   font-family: "Overpass";
   color: hsl(207, 13%, 34%);
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 200;
   width: 100%;
   letter-spacing: 0.5px;
@@ -47,14 +49,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 55%;
+  width: 50%;
 }
 .intro_content_img_mobile {
   display: none;
 }
 .intro_content_img_web .web_view {
   position: absolute;
-  width: 90%;
+  width: 100%;
   right: -200px;
 }
 @media (min-width: 1024px) and (max-width: 1399px) {
@@ -143,12 +145,13 @@
   color: hsl(0, 0%, 100%);
   font-size: 25px;
   margin-bottom: 20px;
+  font-weight: 600;
 }
 .intro_two p {
   font-family: "Overpass";
   color: hsl(0, 0%, 100%);
   font-weight: 200;
-  font-size: 12px;
+  font-size: 14px;
   width: 70%;
   letter-spacing: 0.5px;
   line-height: 24px;
@@ -179,7 +182,7 @@
     text-align: center;
   }
   .intro_two p{
-    width: 100%;
+    width: 70%;
     text-align: center;
   }
 }
@@ -210,12 +213,13 @@
   font-family: "Overpass";
   color: hsl(208, 49%, 24%);
   font-size: 18px;
+  font-weight: 600;
   margin-bottom: 20px;
 }
 .intro_content_three_desc_container p {
   font-family: "Overpass";
   color: hsl(207, 13%, 34%);
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 200;
   width: 100%;
   letter-spacing: 0.5px;
@@ -233,12 +237,12 @@
 }
 .intro_content_three_img_web .web_view {
   position: absolute;
-  width: 90%;
-  left: -170px;
+  width: 100%;
+  left: -185px;
 }
 @media (min-width: 1024px) and (max-width: 1399px) {
   .intro_content_three_img_web .web_view {
-    left: -110px;
+    left: -130px;
   }
   .intro_content_three_desc {
     width: 50%;
@@ -250,7 +254,7 @@
 }
 @media (min-width: 575px) and (max-width: 1023px) {
   .intro_content_three_img_web .web_view {
-    left: -60px;
+    left: -82px;
     width: 100%;
   }
   .intro_content_three_desc {
